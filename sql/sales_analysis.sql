@@ -15,3 +15,12 @@ SELECT
 FROM orders
 GROUP BY region
 ORDER BY total_sales DESC;
+
+-- Top 5 products by total sales
+SELECT
+    product_name,
+    SUM(sales) AS total_sales
+FROM orders
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 5;
