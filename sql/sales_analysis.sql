@@ -7,3 +7,11 @@
 SELECT *
 FROM orders
 LIMIT 10;
+
+-- Total sales by region
+SELECT
+    region,
+    SUM(sales) AS total_sales
+FROM orders
+GROUP BY region
+ORDER BY total_sales DESC;
