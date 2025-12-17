@@ -24,3 +24,12 @@ FROM orders
 GROUP BY product_name
 ORDER BY total_sales DESC
 LIMIT 5;
+
+-- Total sales and profit by region
+SELECT
+    Region,
+    SUM(Sales) AS total_sales,
+    SUM(Profit) AS total_profit
+FROM superstore
+GROUP BY Region
+ORDER BY total_sales DESC;
